@@ -1,0 +1,99 @@
+SpotDL — Human-friendly README
+
+SpotDL is a command-line tool that turns your Spotify links (tracks, albums, playlists, even artists) into properly tagged audio files. It looks up each Spotify item on YouTube/YouTube Music, downloads the best match, then adds clean metadata—title, artist, album, cover art, and often lyrics—so your library stays organized. 
+spotDL
++1
+
+What it actually does (in plain English)
+
+Takes Spotify links you paste in (or whole playlists/albums).
+
+Finds the same songs on YouTube (or YouTube Music).
+
+Downloads the audio and tags it with Spotify metadata: artist, album, track number, cover art, and lyrics where available. 
+spotDL
++1
+
+Note: SpotDL does not download from Spotify’s servers. It matches Spotify items to YouTube sources and downloads those. 
+spotDL
+
+Highlights
+
+🔗 Paste a track/album/playlist/artist URL and go. 
+spotDL
+
+🖼️ Album art & metadata auto-tagging; lyrics support. 
+spotDL
++1
+
+🧾 M3U/playlist handling and archive files to skip duplicates. 
+spotDL
+
+🧰 Cross-platform (Windows/macOS/Linux) via Python + FFmpeg. 
+SpotDL
+
+🆓 Open source (MIT licensed codebase). 
+GitHub
+
+Quick start
+
+Install prerequisites
+
+Python (3.8+) and FFmpeg. On Windows, install the Visual C++ Redistributable first (as the docs suggest). 
+SpotDL
+
+Install SpotDL
+
+pip install spotdl
+
+
+(See the installation guide if you prefer other methods or need help with FFmpeg.) 
+PyPI
++1
+
+Download something
+
+# Single track
+spotdl https://open.spotify.com/track/XXXXXXXX
+
+# Whole playlist
+spotdl https://open.spotify.com/playlist/XXXXXXXX
+
+# An album
+spotdl https://open.spotify.com/album/XXXXXXXX
+
+
+See the usage page for advanced flags (archives, error logs, playlist numbering, scanning existing files, etc.). 
+spotDL
+
+Common options you’ll actually use
+
+--m3u – write an M3U file alongside your downloads.
+
+--archive my_archive.txt – keep a list of what you’ve already grabbed to avoid duplicates.
+
+--scan-for-songs + --overwrite skip/force – control how SpotDL treats files you already have.
+
+--playlist-numbering – embed playlist order in track numbers/album tagging. 
+spotDL
+
+How it organizes your files
+
+By default, SpotDL writes neatly tagged audio and cover images. Because tags come from Spotify while audio comes from YouTube, you usually get clean filenames and library-ready tags with minimal fuss. Recent releases even improved lyrics handling, per-track art with playlist numbering, and duplicate-skipping. 
+spotDL
++1
+
+Troubleshooting tips
+
+Missing FFmpeg → Install it and make sure it’s on your PATH. 
+SpotDL
+
+Wrong song matched → Prefer URLs over text searches; use archives to prevent repeats. 
+spotDL
+
+Quality expectations → Audio is sourced from YouTube, not Spotify’s CDN, so quality depends on the YouTube upload. 
+spotDL
+
+Responsible use
+
+Only download content you’re legally allowed to obtain in your country (e.g., for personal use where permitted). Always respect creators’ rights and your platform’s terms.
